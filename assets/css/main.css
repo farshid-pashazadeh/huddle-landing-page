@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* main styling */
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400, 700;
+    font-display: swap;
+    line-height: 1.5;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #0d2227;
+}
+
+/* utility classes */
+.container {
+    max-width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.nav {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+.d-f-row {
+    display: flex;
+}
+
+.d-f-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.jc-se {
+    justify-content: space-evenly;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+#header-section .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,max-content);
+    column-gap: 5rem;
+    row-gap: 5rem;
+    grid-template-areas: 
+    "nav nav"
+    "content mockups"
+    ;
+    
+}
+
+.btn{
+    padding: 1rem 5rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.btn-shadow {
+    box-shadow: 2px 2px 5px 1px #ccc, -2px -2px 5px 1px #ccc;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.btn-shadow:hover{
+    box-shadow: none;
+}
+
+.get-start {
+    background-color: #fe52c0;
+    color: #fff;
+    width: max-content;
+    padding: 1rem 5rem;
+}
+
+#header-section {
+    width: 100%;
+    height: 90vh;
+    background-color: #edfbfe;
+    background-image: url("../images/bg-hero-desktop.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4rem 0rem;
+}
+
+#header-section .logo {
+    display: inline-block;
+    width: 200px;
+}
+
+#header-section .logo img {
+    width: 100%;
+}
+
+#header-section .try {
+    background-color: white;
+    font-weight: 700;
+}
+
+#header-section .content .title {
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#header-section .content .text {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
