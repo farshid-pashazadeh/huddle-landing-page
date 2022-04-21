@@ -33,7 +33,7 @@ a {
 /* utility classes */
 .container {
     max-width: 1100px;
-    height: 100%;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -67,7 +67,7 @@ a {
     align-items: center;
 }
 
-.btn{
+.btn {
     padding: 1rem 5rem;
     border-radius: 2rem;
     -webkit-border-radius: 2rem;
@@ -87,9 +87,22 @@ a {
     -o-transition: all 0.2s;
 }
 
-.btn-shadow:hover{
+.btn-shadow:hover {
     box-shadow: none;
 }
+
+.box-shadow {
+    box-shadow: 0px 0px 24px -6px #ccc;
+    /* transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s; */
+}
+
+/* .box-shadow:hover {
+    box-shadow: none;
+} */
 
 /* HEADER-SECTION START STYLING */
 
@@ -106,10 +119,10 @@ a {
 
 #header-section .grid-container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,max-content);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, max-content);
     column-gap: 5rem;
-    row-gap: 5rem;  
+    row-gap: 5rem;
 }
 
 #header-section .logo {
@@ -145,3 +158,62 @@ a {
 }
 
 /* HEADER-SECTION END STYLING */
+/* >>>>>>>>>>>>>>>>>>>>>>>> */
+/* MAIN-SECTION START STYLING */
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 5rem;
+}
+
+#main-section {
+    padding: 10rem;
+}
+
+#main-section article {
+    width: 100%;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem 4rem 10rem;
+}
+
+#main-section article:hover {
+    cursor: pointer;
+}
+
+#main-section article:nth-child(odd) {
+    flex-direction: row;
+}
+
+#main-section article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+#main-section div.content {
+    max-width: 40%;
+}
+
+#main-section div.content h2 {
+    text-transform: capitalize;
+    font-size: 3.2rem;
+}
+
+#main-section div.content p {
+    color: #919599;
+    margin-top: 1rem;
+}
+
+#main-section div.content p::first-letter {
+    text-transform: uppercase;
+
+}
+
+/* #main-section article img {
+    width: 350px;
+} */
