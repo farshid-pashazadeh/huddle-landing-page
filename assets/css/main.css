@@ -102,13 +102,12 @@ a {
 
 #header-section {
     width: 100%;
-    max-height: 90vh;
+    min-height: 90vh;
     background-color: #edfbfe;
     background-image: url("../images/bg-hero-desktop.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 4rem 0rem;
     overflow: hidden;
 }
 
@@ -346,3 +345,55 @@ a {
     box-shadow: 0px 0px 14px -8px #00252e;
 }
 
+/* responsive design */
+
+/* tablet design */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 4rem;
+    }
+
+    #header-section .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,auto);
+        text-align: center;
+        row-gap: 4rem;
+    }
+
+    .get-start-btn {
+        margin: 0rem auto;
+        margin-top: 4rem;
+    }
+
+    #header-section .content {
+        margin-top: 8rem;
+    }
+
+    #header-section .content .text {
+        margin-top: 4rem;
+    }
+
+    #header-section .mockups {
+        margin: 0rem auto;
+        margin-top: 4rem;
+    }
+
+    #main-section article:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+    #main-section article:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+
+    #main-section div.content {
+        max-width: 100%;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    #main-section article {
+        padding: 4rem;
+    }
+
+}
