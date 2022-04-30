@@ -13,11 +13,11 @@ html {
 }
 
 body {
-    font-size: 1.4rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400, 700;
     font-display: swap;
     line-height: 1.5;
+    font-size: 1.5rem;
 }
 
 a {
@@ -30,12 +30,13 @@ a {
     max-width: 1100px;
     height: auto;
     margin: 0 auto;
+    padding: 0rem 2rem;
 }
 
 .nav {
     grid-column: 1/-1;
     grid-row: 1/2;
-    margin-bottom: 8rem;
+    margin-bottom: 40px;
 }
 
 .d-f-row {
@@ -64,7 +65,7 @@ a {
 }
 
 .btn {
-    padding: 1.4rem 8rem;
+    padding: 10px 50px;
     border-radius: 2.8rem;
     -webkit-border-radius: 2.8rem;
     -moz-border-radius: 2.8rem;
@@ -104,7 +105,7 @@ a {
 
 #header-section {
     width: 100%;
-    min-height: 90vh;
+    min-height: fit-content;
     background-color: #edfbfe;
     background-image: url("../images/bg-hero-desktop.png");
     background-position: center center;
@@ -157,11 +158,16 @@ a {
     font-size: 1.6rem;
     font-weight: 400;
     color: #284146;
+    margin-top: 2rem;
 }
 
 #header-section svg.mockups {
     max-width: 100%;
     height: auto;
+}
+
+#header-section .get-start-btn {
+    margin-top: 4rem;
 }
 
 .get-start-btn {
@@ -225,7 +231,7 @@ a {
 
 #main-section div.content h2 {
     text-transform: capitalize;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
 }
 
 #main-section div.content p {
@@ -244,8 +250,9 @@ a {
 #footer-section {
     background-color: #00252e;
     color: #a3d4e8;
-    padding: 4rem 0rem;
+    padding: 10rem 0rem 4rem;
     position: relative;
+    text-align: left;
 }
 
 #footer-section .grid-container {
@@ -260,9 +267,14 @@ a {
 #footer-section .footer-logo {
     grid-row: 1/2;
     grid-column: 1/-1;
+    width: auto;
+    height: 40px;
 }
 
-:is(#footer-section) :is(.contact, .about-me-1, .about-me-2, .social-media) {
+#footer-section .contact,
+#footer-section .about-me-1,
+#footer-section .about-me-2,
+#footer-section .social-media {
     grid-row: 2/3;
 }
 
@@ -291,6 +303,14 @@ a {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     color: #fbfefe;
+    transition-property: background-color ,color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+#footer-section .social-media a.social-icone:hover {
+    background-color: #fff;
+    color: #00252e;
 }
 
 #footer-section .contact .icone {
@@ -317,13 +337,13 @@ a {
 
 #footer-section .copyright {
     margin-top: 3rem;
+    text-align: right;
 }
 
 #footer-section .community {
     position: absolute;
-    top: -50%;
+    top: -125px;
     left: 50%;
-    transform: translate(-50%, 50%);
     border-radius: 2.4rem;
     -webkit-border-radius: 2.4rem;
     -moz-border-radius: 2.4rem;
@@ -337,10 +357,11 @@ a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    -webkit-transform: translate(-50%, 50%);
-    -moz-transform: translate(-50%, 50%);
-    -ms-transform: translate(-50%, 50%);
-    -o-transform: translate(-50%, 50%);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 
 #footer-section .community a.get-start-btn {
@@ -362,13 +383,17 @@ a {
 
 /* tablet design */
 @media screen and (max-width: 768px) {
+    html {
+        font-size: 9px;
+    }
+
     body {
         text-align: center;
     }
 
     .container {
         max-width: 768px;
-        padding: 4rem;
+        padding: 0rem 4rem;
     }
 
     .btn {
@@ -382,13 +407,29 @@ a {
         row-gap: 4rem;
     }
 
-    .get-start-btn {
+    #header-section .nav {
+        margin-bottom: 4rem;
+    }
+
+    #header-section .logo {
+        max-width: 160px;
+    }
+
+    #header-section .try {
+        padding: 1rem 4rem;
+    }
+
+    #header-section .content h2.title {
+        font-size: 3.2rem;
+    }
+
+    #header-section .get-start-btn {
         margin: 0rem auto;
         margin-top: 4rem;
     }
 
     #header-section .content {
-        margin-top: 8rem;
+        margin-top: 0rem;
     }
 
     #header-section .content .text {
@@ -418,17 +459,29 @@ a {
         margin-top: 4rem;
     }
 
+    #main-section div.content h2 {
+        font-size: 3rem;
+    }
+
     #main-section article {
         padding: 4rem;
+    }
+
+    #footer-section .contact .icone {
+        margin-right: 2rem;
     }
 
 }
 
 /* responsive for mobile */
 @media screen and (max-width: 576px) {
+    html {
+        font-size: 8px;
+    }
+
     .container {
         max-width: 576px;
-        padding: 4rem;
+        padding: 0rem 3rem;
     }
 
     .btn {
@@ -440,9 +493,90 @@ a {
         font-size: 1.2rem;
     }
 
+    #header-section .logo {
+        max-width: 140px;
+    }
+
+    #header-section .try {
+        padding: 0.8rem 3rem;
+    }
+
+    #main-section article {
+        padding: 2rem 1rem;
+    }
+
+    #main-section div.content h2 {
+        font-size: 2.8rem;
+    }
+
     #main-section article svg {
         width: auto;
         height: 200px;
+    }
+
+    #footer-section .community {
+        top: -100px;
+        padding: 2rem;
+    }
+
+    #footer-section .grid-container {
+        display: grid;
+        grid-template-rows: repeat(5, minmax(1fr, max-content));
+        grid-template-columns: repeat(1, 1fr);
+        /* justify-content: space-between; */
+        align-items: start;
+        row-gap: 2rem;
+        column-gap: 0rem;
+    }
+
+    #footer-section .footer-logo {
+        grid-row: 1/2;
+        grid-column: 1/-1;
+        width: auto;
+        height: 25px;
+    }
+
+    #footer-section .contact {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+    }
+
+    #footer-section .about-me-1 {
+        grid-row: 3/4;
+        grid-column: 1/-1;
+    }
+
+    #footer-section .about-me-2 {
+        grid-row: 4/5;
+        grid-column: 1/-1;
+    }
+
+    #footer-section .about-me-1,
+    #footer-section .about-me-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+
+    #footer-section .social-media {
+        grid-row: 5/6;
+        grid-column: 1/-1;
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer-section .social-media a.social-icone {
+        margin-right: 10px;
+    }
+
+    #footer-section .social-media a.social-icone:last-child {
+        margin-right: 0px;
+    }
+
+    .copyright {
+        text-align: center;
     }
 
 }
